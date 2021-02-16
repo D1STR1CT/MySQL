@@ -1,22 +1,5 @@
-DROP DATABASE IF EXISTS lab1;
-CREATE DATABASE IF NOT EXISTS lab1;
-USE lab1;
-CREATE TABLE book (
-N INT(5),
-Код int(5),
-Новинка TEXT DEFAULT 'Нет',
-Назва Text(50),
-Ціна int(4),
-Видавництво char(20),
-Сторінки int(3) not null ,
-Формат varchar(15),
-Дата date,
-Тираж int(5),
-Тема text(30),
-Категорія char(20)
-    )
-    ENGINE=INNODB
-
 ALTER TABLE `book` ADD `Автор` VARCHAR(15) NULL AFTER `Видавництво`; 
 ALTER TABLE book MODIFY COLUMN Автор varchar(20);
 ALTER TABLE book DROP COLUMN Автор;
+ORDER BY `idx` DESC;
+ALTER TABLE `book` DROP INDEX `idx`;
